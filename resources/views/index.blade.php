@@ -35,9 +35,9 @@
                             </div>
                         </div>
                         <div class="form-group ">
-                            {{ Form::label('textarea', 'Write an awesome message') }}
+                            {{ Form::label('message', 'Write an awesome message') }}
                             <div class="col-md-12">
-                                {{ Form::textarea('textarea', null, array('placeholder' => 'Enter your message', 'id' => 'message', 'class' => 'form-control rounded', 'rows' => 3)) }}
+                                {{ Form::textarea('message', null, array('placeholder' => 'Enter your message', 'id' => 'message', 'class' => 'form-control rounded', 'rows' => 3)) }}
                             </div>
                         </div>
                         <div class="form-group row mb-0">

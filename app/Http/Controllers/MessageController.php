@@ -13,14 +13,14 @@ class MessageController extends Controller
         $data = [
             'key' => str_random(10),
             'email' => $request->email,
-            'content' => $request->message
+            'message' => $request->message
         ];
         $msg->key = $data['key'];
         $msg->email = $data['email'];
-        $msg->message = $data['content'];
+        $msg->message = $data['message'];
         $msg->save();
         Mail::send('emails.link-email', $data, function ($m) use ($data) {
-            $m->to($data['email'])->subject("Snap Mail - new message");
+            $m->to($data['email'])->subject("SnapMail - new message");
         });
         return view('validation-form');
     }
@@ -29,7 +29,7 @@ class MessageController extends Controller
         $final = $msg->where('key', $request->key)->firstOrFail();
         $data = [
             'email' => $final->email,
-            'content' => $final->message,
+            'message' => $final->message,
         ];
         $final->delete();
         return view('emails.template', $data);

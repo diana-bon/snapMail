@@ -16,7 +16,7 @@
             <div class="card border-info">
                 <div class="card-body">
                     <h1>Hey! take a look to the message of {{ $email }} : </h1>
-                    <p>Message : {!! $content !!}</p>
+                    <p>Message : {!! $message !!}</p>
                 </div>
             </div>
         </div>
