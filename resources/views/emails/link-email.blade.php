@@ -17,9 +17,7 @@
             <div class="card border-info">
                 <div class="card-body">
                     <h1>Here is your link to see the awesome message</h1>
-                    <a href="http://127.0.0.1:8000/message/{{$key}}">Cliquez sur ce lien : http://127.0.0.1:8000/message/{{$key}}</a>
-                </div>
-            </div>
+                    <a href="{{ url('/message/'.$key )}}">Cliquez sur ce lien : {{ url('/message/'.$key )}}</a>            </div>
         </div>
     </div>
 
